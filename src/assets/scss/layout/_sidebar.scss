@@ -1,0 +1,17 @@
+#sidebar{
+    flex: 0 0 $sidebar-size;
+    width: $sidebar-size;
+    .side-header{
+        height:$header-size
+    }
+    .nav-link{
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+        &.active{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}

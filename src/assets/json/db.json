@@ -1,0 +1,81 @@
+{
+    "pharmacies": [
+        {
+            "name":"Happy Pharmacy",
+            "email":"happypharmacy@gmail.com",
+            "establishmentDate":"30-05-2000",
+            "mobileNumber":"8128569394",
+            "address":"A-20/21, Shreeji Arcade, Anand Mahal Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":1,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"24x7 Pharmacy",
+            "email":"24x7pharmacy@gmail.com",
+            "establishmentDate":"30-05-2000",
+            "mobileNumber":"8285693594",
+            "address":"U-12/13, Shreeji Arcade, Anand Mahal Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":2,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"Always Pharmacy",
+            "email":"alwayspharmacy@gmail.com",
+            "establishmentDate":"12-07-1996",
+            "mobileNumber":"8245456939",
+            "address":"U-12/13, Prime Arcade, Anand Mahal Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":3,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"Healthy Pharmacy",
+            "email":"healthypharmacy@gmail.com",
+            "establishmentDate":"30-05-2000",
+            "mobileNumber":"4585569394",
+            "address":"D-12/13, Nisaal Arcade, Rander Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":4,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"Fine Pharmacy",
+            "email":"finepharmacy@gmail.com",
+            "establishmentDate":"30-05-2000",
+            "mobileNumber":"8285789456",
+            "address":"F-12/13, Shreeji Arcade, Anand Mahal Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":5,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"Apolo Pharmacy",
+            "email":"apolopharmacy@gmail.com",
+            "establishmentDate":"30-05-2000",
+            "mobileNumber":"8252468394",
+            "address":"T-98/99, Lalji Arcade, L.H. Road, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":6,
+            "city":"Surat, Gujarat."
+        },
+        {
+            "name":"PK Pharmacy",
+            "email":"pkpharmacy@gmail.com",
+            "establishmentDate":"23-03-1989",
+            "mobileNumber":"8285564294",
+            "address":"D-23/24, Mishal Arcade, Gaurav Path, Surat",
+            "certificate": "",
+            "pharmacistDegreeCertificate": "",
+            "id":7,
+            "city":"Surat, Gujarat."
+        }
+    ]
+}
