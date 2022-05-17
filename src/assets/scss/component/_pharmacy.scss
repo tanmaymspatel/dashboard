@@ -1,0 +1,12 @@
+.pharmacy-item {
+    transition: 0.2s all ease-in-out;
+    &:hover {
+        background-color: rgba($primary, 0.2);
+    }
+    .pharmacy-image {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}

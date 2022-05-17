@@ -6,12 +6,12 @@
     }
     .nav-link{
         &:hover{
-            background-color: $primary;
-            color: $white;
+            background-color: rgba($primary,0.2);
+            color: $primary;
         }
         &.active{
-            background-color: $primary;
-            color: $white;
+            background-color: rgba($primary,0.2);
+            color: $primary;
         }
     }
 }

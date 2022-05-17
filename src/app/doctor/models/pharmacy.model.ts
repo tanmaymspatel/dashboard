@@ -2,9 +2,27 @@
  * @author Tanmay Patel
  */
 
+
+ export class PharmacyList{
+    public name: string;
+    public mobileNumber: string;
+    public city: string;
+    public state: string;
+
+    constructor(
+        name: string,
+        mobileNumber:string,
+        city: string,
+        state: string
+    ){
+        this.name = name;
+        this.mobileNumber = mobileNumber;
+        this.city = city;
+        this.state = state;
+    }
+}
  export class Pharmacy {
     public email: string;
-    public id: number;
     public name: string;
     public establishmentDate: string;
     public mobileNumber: string;
@@ -12,20 +30,20 @@
     public certificate: string;
     public pharmacistDegreeCertificate: string;
     public city:string;
+    public state:string;
 
     constructor(
         email: string,
-        id:number,
         name: string,
         establishmentDate: string,
         mobileNumber: string,
         address: string,
         certificate: string,
         pharmacistDegreeCertificate: string,
-        city:string
+        city:string,
+        state:string
         ) {
         this.email = email;
-        this.id = id;
         this.name = name;
         this.establishmentDate = establishmentDate;
         this.mobileNumber = mobileNumber;
@@ -33,5 +51,6 @@
         this.certificate = certificate;
         this.pharmacistDegreeCertificate = pharmacistDegreeCertificate;
         this.city = city;
+        this.state = state;
     }
 }

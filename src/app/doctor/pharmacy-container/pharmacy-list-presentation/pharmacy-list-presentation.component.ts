@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Pharmacy } from 'src/app/doctor/models/pharmacy.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Pharmacy, PharmacyList } from 'src/app/doctor/models/pharmacy.model';
 
 @Component({
   selector: 'app-pharmacy-list-presentation',
@@ -9,25 +9,30 @@ import { Pharmacy } from 'src/app/doctor/models/pharmacy.model';
 })
 export class PharmacyListPresentationComponent implements OnInit {
 
-  @Input() public set pharmacyList(pharmacy : Pharmacy[] | null) {
+  @Input() public set pharmacyList(pharmacy: PharmacyList[] | null) {
     this._pharmacyList = pharmacy;
   }
-  
-  public get pharmacyList() : Pharmacy[] | null {
+
+  // mobile number of the pharmacy which is selected and which is to be emmited
+  @Output() public pharmacyMobileNumber : EventEmitter<string>
+
+  public get pharmacyList(): PharmacyList[] | null {
     return this._pharmacyList;
   }
 
-  private _pharmacyList !: Pharmacy[] | null;
-  
+  // list of pharmacies from the backend
+  private _pharmacyList !: PharmacyList[] | null;
 
-  constructor() { }
+
+  constructor() {
+    this.pharmacyMobileNumber = new EventEmitter();
+   }
 
   ngOnInit(): void {
   }
 
-  public OnClick(){
-    console.log(this._pharmacyList);
-    
+  public onPharmacy(mobileNumber: string) {
+    this.pharmacyMobileNumber.emit(mobileNumber);
   }
 
 }

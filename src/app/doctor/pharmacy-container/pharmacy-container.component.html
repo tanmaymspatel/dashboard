@@ -1,6 +1,13 @@
-<app-pharmacy-list-presentation 
-[pharmacyList]="pharmacylist$ | async"
->
-</app-pharmacy-list-presentation>
-<app-pharmacy-view-presentation>
-</app-pharmacy-view-presentation>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <app-pharmacy-list-presentation [pharmacyList]="pharmacylist$ | async" (pharmacyMobileNumber)="pharmacyMobileNumber($event)">
+            </app-pharmacy-list-presentation>
+        </div>
+        <div class="col-6">
+            <app-pharmacy-view-presentation [PharmacyDetailsByMobileNumber] = "PharmacyDetailsByMobileNumber$ | async">
+            </app-pharmacy-view-presentation>
+        </div>
+    </div>
+    
+</div>
