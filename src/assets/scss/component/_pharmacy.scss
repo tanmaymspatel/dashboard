@@ -1,7 +1,12 @@
 .pharmacy-item {
     transition: 0.2s all ease-in-out;
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid rgba($primary, 0.1);
     &:hover {
-        background-color: rgba($primary, 0.2);
+        background-color: rgba($primary, 0.1);
+    }
+    .pharmacy-details-text{
+        font-size: 0.875rem;
     }
     .pharmacy-image {
         height: 50px;
@@ -9,4 +14,19 @@
         border-radius: 50%;
         border: 1px solid black;
     }
+}
+.pharmacy-details {
+    .pharmacy-details-title {
+        flex: 0 0 230px;
+    }
+    .pharmacy-details-image {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}
+
+.selected{
+    background-color: rgba($primary, 0.1);
 }

@@ -10,7 +10,9 @@ import { Pharmacy, PharmacyList } from 'src/app/doctor/models/pharmacy.model';
 export class PharmacyListPresentationComponent implements OnInit {
 
   @Input() public set pharmacyList(pharmacy: PharmacyList[] | null) {
-    this._pharmacyList = pharmacy;
+    if(pharmacy){
+      this._pharmacyList = pharmacy;
+    }
   }
 
   // mobile number of the pharmacy which is selected and which is to be emmited
@@ -22,10 +24,14 @@ export class PharmacyListPresentationComponent implements OnInit {
 
   // list of pharmacies from the backend
   private _pharmacyList !: PharmacyList[] | null;
-
+  public selected:any;
 
   constructor() {
     this.pharmacyMobileNumber = new EventEmitter();
+    if(this._pharmacyList)
+    {
+      this.selected = this._pharmacyList[0].mobileNumber;
+    }
    }
 
   ngOnInit(): void {

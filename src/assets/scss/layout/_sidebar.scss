@@ -5,11 +5,7 @@
         height:$header-size
     }
     .nav-link{
-        &:hover{
-            background-color: rgba($primary,0.2);
-            color: $primary;
-        }
-        &.active{
+        &:hover, &.active{
             background-color: rgba($primary,0.2);
             color: $primary;
         }

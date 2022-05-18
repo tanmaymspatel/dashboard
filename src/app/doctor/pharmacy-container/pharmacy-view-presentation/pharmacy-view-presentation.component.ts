@@ -41,4 +41,9 @@ export class PharmacyViewPresentationComponent implements OnInit {
   ]
   }
 
+  viewData(){
+    console.log(this.PharmacyDetailsByMobileNumber);
+    
+  }
+
 }

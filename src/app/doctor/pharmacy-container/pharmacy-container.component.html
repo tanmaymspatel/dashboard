@@ -1,5 +1,5 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid p-5">
+    <div class="row g-4">
         <div class="col-6">
             <app-pharmacy-list-presentation [pharmacyList]="pharmacylist$ | async" (pharmacyMobileNumber)="pharmacyMobileNumber($event)">
             </app-pharmacy-list-presentation>

@@ -28,6 +28,6 @@ export class DoctorService {
   }
 
   public getPharmacyByMobileNumber(mobileNumber:string) : Observable<Pharmacy[]>{
-    return this.http.get<Pharmacy[]>(`${this.apiLink}/pharmacyDetails/${mobileNumber}`)
+    return this.http.get<Pharmacy[]>(`${this.apiLink}/pharmacyDetails?mobileNumber=${mobileNumber}`)
   }
 }

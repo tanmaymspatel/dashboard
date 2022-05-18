@@ -1,5 +1,36 @@
-<div class="container-fluid">
-    <div *ngFor="let pharmacy of pharmacyDetails">
-        <div>{{pharmacy.name}}</div>
+<div class="pharmacy-details bg-white p-5 h-100">
+    <div *ngFor="let pharmacy of PharmacyDetailsByMobileNumber">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <figure>
+                <img class="pharmacy-details-image" src="../../../../assets/images/pharmacy.svg" alt="Pharmacy image">
+            </figure>
+            <h4 class="pharmacy-name pt-3 fw-bold">{{pharmacy.name}}</h4>
+            <h5 class="text-primary fw-light fs-6 pt-1">{{pharmacy.mobileNumber}}</h5>
+        </div>
+        <div class="pharmacy-details pt-5">
+            <div class="d-flex">
+                <h5 class="fs-6 text-primary pharmacy-details-title">Date of Establishment</h5>
+                <p>:</p>
+                <p class="flex-grow-1"> <span class="pharmacy-details-value ps-4 fw-bold"> {{pharmacy.establishmentDate}}</span></p>
+            </div>
+            <div class="d-flex">
+                <h5 class="fs-6 text-primary pharmacy-details-title">Email Id</h5>
+                <p>:</p>
+                <p class="flex-grow-1"><span class="pharmacy-details-value ps-4 fw-bold">{{pharmacy.email}}</span></p>
+            </div>
+            <div class="d-flex">
+                <h5 class="fs-6 text-primary pharmacy-details-title">Address</h5>
+                <p>:</p>
+                <p class="flex-grow-1"><span class="pharmacy-details-value ps-4 fw-bold">{{pharmacy.address}}</span></p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-6">
+                <h5 class="certificate fs-6 text-primary">Certificate of Pharmacy</h5>
+            </div>
+            <div class="col-6">
+                <h5 class="certificate fs-6 text-primary">Degree/Certificate of Pharmacist</h5>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,20 +1,23 @@
-<div class="pharmacy-item d-flex justify-content-between align-items-center cursor-pointer py-3 px-4" *ngFor="let pharmacy of pharmacyList" (click)="onPharmacy(pharmacy.mobileNumber)">
-    <div class="d-flex align-items-center">
-        <div >
-            <figure class="mb-0">
-                <img class="pharmacy-image" src="../../../../assets/images/pharmacy.svg" alt="Phamacy Image"/>
-            </figure>
-        </div >
-        <div class="pharmacy-name ps-3">
-            {{pharmacy.name}}
+<div class="bg-white">
+    <div class="pharmacy-item d-flex justify-content-between align-items-center cursor-pointer"
+        *ngFor="let pharmacy of pharmacyList" (click)="onPharmacy(pharmacy.mobileNumber)" [ngClass]="pharmacy.mobileNumber === selected ? 'selected' : ''">
+        <div class="d-flex align-items-center">
+            <div>
+                <figure class="mb-0">
+                    <img class="pharmacy-image" src="../../../../assets/images/pharmacy.svg" alt="Phamacy Image" />
+                </figure>
+            </div>
+            <h6 class="pharmacy-name ps-4 fw-bold mb-0">
+                {{pharmacy.name}}
+            </h6>
         </div>
-    </div>
-    <div class="pharmacy-details">
-        <div class="mobile-number text-primary">
-            {{pharmacy.mobileNumber}}
-        </div>
-        <div class="pharmacy-address text-primary">
-            {{pharmacy.city}}, {{pharmacy.state}}
+        <div class="text-end">
+            <h6 class="pharmacy-details-text text-primary">
+                {{pharmacy.mobileNumber}}
+            </h6>
+            <h6 class="pharmacy-details-text text-primary">
+                {{pharmacy.city}}, {{pharmacy.state}}
+            </h6>
         </div>
     </div>
 </div>
