@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { observable, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { DoctorService } from '../doctor.service';
 import { Pharmacy, PharmacyList } from '../models/pharmacy.model';
 
@@ -9,14 +9,14 @@ import { Pharmacy, PharmacyList } from '../models/pharmacy.model';
   styles: [
   ]
 })
-export class PharmacyContainerComponent implements OnInit{
+export class PharmacyContainerComponent implements OnInit {
 
-  public pharmacylist$?: Observable<PharmacyList[]>
-  public PharmacyDetailsByMobileNumber$?: Observable<Pharmacy[]>
+  public pharmacylist$: Observable<PharmacyList[]>
+  public pharmacyDetailsByMobileNumber$: Observable<Pharmacy[]>
 
   constructor(private _services: DoctorService) {
     this.pharmacylist$ = new Observable();
-    this.PharmacyDetailsByMobileNumber$ = new Observable();
+    this.pharmacyDetailsByMobileNumber$ = new Observable();
 
   }
 
@@ -29,13 +29,7 @@ export class PharmacyContainerComponent implements OnInit{
   }
 
   public pharmacyMobileNumber(mobileNumber: string) {
-    console.log(mobileNumber);
-    this.PharmacyDetailsByMobileNumber$ = this._services.getPharmacyByMobileNumber(mobileNumber);
-    
-  }
-  onClick(){
-    console.log(this.PharmacyDetailsByMobileNumber$);
-    
+    this.pharmacyDetailsByMobileNumber$ = this._services.getPharmacyByMobileNumber(mobileNumber);
   }
 
 }

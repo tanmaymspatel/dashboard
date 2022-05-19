@@ -7,43 +7,18 @@ import { Pharmacy } from '../../models/pharmacy.model';
   styles: [
   ]
 })
-export class PharmacyViewPresentationComponent implements OnInit {
+export class PharmacyViewPresentationComponent {
 
-  public pharmacyDetails!: Pharmacy[];
-
-  @Input() public set PharmacyDetailsByMobileNumber(pharmacyDetails: Pharmacy[] | null) {
+  // pharmacy details from a mobile number
+  @Input() public set pharmacyDetailsByMobileNumber(pharmacyDetails: Pharmacy[] | null) {
     if (pharmacyDetails) {
-      this._PharmacyDetailsByMobileNumber = pharmacyDetails;
+      this._pharmacyDetailsByMobileNumber = pharmacyDetails;
     }
   }
-  public get PharmacyDetailsByMobileNumber(): Pharmacy[] {
-    return this._PharmacyDetailsByMobileNumber;
+  public get pharmacyDetailsByMobileNumber(): Pharmacy[] {
+    return this._pharmacyDetailsByMobileNumber;
   }
 
-  private _PharmacyDetailsByMobileNumber!: Pharmacy[];
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this.pharmacyDetails = [
-      {
-      "name": "Happy Pharmacy",
-      "email": "happypharmacy@gmail.com",
-      "establishmentDate": "30-05-2000",
-      "mobileNumber": "8285564294",
-      "address": "A-20/21, Shreeji Arcade, Anand Mahal Road, Surat",
-      "certificate": "",
-      "pharmacistDegreeCertificate": "",
-      "state": "Gujarat",
-      "city": "Surat"
-    }
-  ]
-  }
-
-  viewData(){
-    console.log(this.PharmacyDetailsByMobileNumber);
-    
-  }
+  private _pharmacyDetailsByMobileNumber!: Pharmacy[];
 
 }

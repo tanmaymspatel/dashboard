@@ -1,5 +1,5 @@
 <div class="pharmacy-details bg-white p-5 h-100">
-    <div *ngFor="let pharmacy of PharmacyDetailsByMobileNumber">
+    <div *ngFor="let pharmacy of pharmacyDetailsByMobileNumber">
         <div class="d-flex flex-column align-items-center justify-content-center">
             <figure>
                 <img class="pharmacy-details-image" src="../../../../assets/images/pharmacy.svg" alt="Pharmacy image">
@@ -11,7 +11,7 @@
             <div class="d-flex">
                 <h5 class="fs-6 text-primary pharmacy-details-title">Date of Establishment</h5>
                 <p>:</p>
-                <p class="flex-grow-1"> <span class="pharmacy-details-value ps-4 fw-bold"> {{pharmacy.establishmentDate}}</span></p>
+                <p class="flex-grow-1"> <span class="pharmacy-details-value ps-4 fw-bold"> {{pharmacy.establishmentDate | date:'d MMMM y'}}</span></p>
             </div>
             <div class="d-flex">
                 <h5 class="fs-6 text-primary pharmacy-details-title">Email Id</h5>

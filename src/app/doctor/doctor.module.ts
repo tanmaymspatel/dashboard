@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 import { DoctorRoutingModule } from './doctor-routing.module';
 import { DoctorComponent } from './doctor.component';
@@ -19,6 +21,7 @@ import { PharmacyListPresentationComponent } from './pharmacy-container/pharmacy
   imports: [
     CommonModule,
     DoctorRoutingModule,
+    InfiniteScrollModule,
   ],
   providers:[
     DoctorService,
